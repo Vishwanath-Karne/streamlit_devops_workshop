@@ -1,4 +1,4 @@
-
+import datetime
 import streamlit as st
 
 st.title('Hello World')
@@ -29,5 +29,10 @@ if name:
 
 if st.file_uploader('Please upload a file:', type=['txt', 'csv']):
    st.write('Thanks for uploading a file!')
+
+
+
+t = st.time_input("Set an alarm for", datetime.time(8, 45))
+st.write("Alarm is set for", t)
 
 
